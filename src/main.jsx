@@ -31,14 +31,29 @@ import {
 } from 'lucide-react';
 import './styles.css';
 
+const API_BASE_URL = import.meta.env.VITE_API_URL || '';
+
 const api = async (path, options) => {
-  const response = await fetch(`/api${path}`, {
+  const response = await fetch(`${API_BASE_URL}/api${path}`, {
     headers: { 'Content-Type': 'application/json' },
     ...options
   });
-  if (!response.ok) throw new Error((await response.json()).message || 'Request failed');
+
   if (response.status === 204) return null;
-  return response.json();
+
+  const contentType = response.headers.get('content-type') || '';
+  const isJson = contentType.includes('application/json');
+  const payload = isJson ? await response.json() : await response.text();
+
+  if (!response.ok) {
+    throw new Error(isJson ? payload.message || 'Request failed' : 'API server is not responding. Please restart the backend and try again.');
+  }
+
+  if (!isJson) {
+    throw new Error('API server is not responding. Please restart the backend and try again.');
+  }
+
+  return payload;
 };
 
 const money = (value) => new Intl.NumberFormat('en-IN', {

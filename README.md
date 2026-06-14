@@ -48,7 +48,10 @@ Environment variables:
 PORT=5000
 MONGODB_URI=mongodb://127.0.0.1:27017/homerent
 CLIENT_ORIGIN=http://127.0.0.1:5173,http://localhost:5173
+VITE_API_URL=
 ```
+
+`VITE_API_URL` can stay empty for local `npm run dev` because Vite proxies `/api` to Express. For separate frontend/backend deployments, set it to your backend URL.
 
 ## Usage
 
