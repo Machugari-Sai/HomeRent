@@ -91,6 +91,17 @@ Preview the production build:
 npm run preview
 ```
 
+## Screenshots
+
+Add screenshots here after uploading the repository:
+
+- Homepage hero and search experience
+- Property listings and filters
+- Property details and booking form
+- Booking History page
+- Notification Center
+- Owner Dashboard
+
 ## Folder Structure
 
 ```text
