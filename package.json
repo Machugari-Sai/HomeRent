@@ -1,0 +1,40 @@
+{
+  "name": "homerent",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Premium MERN house rental and home booking platform with booking history and notification center.",
+  "author": "Trinath Reddy",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "client": "vite --host 127.0.0.1 --port 5173",
+    "server": "node server/server.js",
+    "build": "vite build",
+    "lint": "eslint .",
+    "preview": "vite preview --host 127.0.0.1 --port 4173",
+    "start": "node server/server.js"
+  },
+  "dependencies": {
+    "cors": "latest",
+    "dotenv": "^17.4.2",
+    "express": "latest",
+    "express-rate-limit": "^8.5.2",
+    "framer-motion": "latest",
+    "helmet": "^8.2.0",
+    "lucide-react": "latest",
+    "mongoose": "^9.7.0",
+    "react": "latest",
+    "react-dom": "latest"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@vitejs/plugin-react": "latest",
+    "concurrently": "latest",
+    "eslint": "^10.5.0",
+    "eslint-plugin-react-hooks": "^7.1.1",
+    "eslint-plugin-react-refresh": "^0.5.2",
+    "globals": "^17.6.0",
+    "vite": "latest"
+  }
+}
