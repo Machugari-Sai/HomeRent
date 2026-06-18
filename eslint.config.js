@@ -9,7 +9,7 @@ export default [
   },
   js.configs.recommended,
   {
-    files: ['src/**/*.{js,jsx}'],
+    files: ['client/src/**/*.{js,jsx}'],
     languageOptions: {
       ecmaVersion: 'latest',
       sourceType: 'module',
@@ -31,7 +31,7 @@ export default [
     }
   },
   {
-    files: ['server/**/*.js', 'vite.config.js'],
+    files: ['server/**/*.js', 'client/vite.config.js'],
     languageOptions: {
       ecmaVersion: 'latest',
       sourceType: 'module',

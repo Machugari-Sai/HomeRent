@@ -106,15 +106,16 @@ Add screenshots here after uploading the repository:
 
 ```text
 .
+├── client/
+│   ├── src/
+│   │   ├── main.jsx       # React application and page components
+│   │   └── styles.css     # Application styling
+│   ├── index.html
+│   └── vite.config.js     # Vite client configuration
 ├── server/
 │   ├── data.js        # Seed data
 │   ├── server.js      # Express API routes and middleware
 │   └── store.js       # MongoDB/Mongoose persistence layer
-├── src/
-│   ├── main.jsx       # React application and page components
-│   └── styles.css     # Application styling
-├── index.html
-├── vite.config.js
 ├── package.json
 ├── .env.example
 └── README.md

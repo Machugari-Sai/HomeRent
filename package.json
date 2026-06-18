@@ -8,11 +8,11 @@
   "type": "module",
   "scripts": {
     "dev": "concurrently \"npm run server\" \"npm run client\"",
-    "client": "vite --host 127.0.0.1 --port 5173",
+    "client": "vite --config client/vite.config.js --host 127.0.0.1 --port 5173",
     "server": "node server/server.js",
-    "build": "vite build",
+    "build": "vite build --config client/vite.config.js",
     "lint": "eslint .",
-    "preview": "vite preview --host 127.0.0.1 --port 4173",
+    "preview": "vite preview --config client/vite.config.js --host 127.0.0.1 --port 4173",
     "start": "node server/server.js"
   },
   "dependencies": {
